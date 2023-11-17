@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}"/>
+
+   <link rel="icon" href="../static/image/favicon.jpg" type="image/x-icon" >
+
+  </head>
+
+  <body class="main">
+    
+<div class="topnav" id="myTopnav">
+  <a href="{{ url_for('home') }}" class="active">Home</a>
+  <img src="../static/image/taal_symbool.png" alt="">
+  <a href="{{ url_for('dishes') }}" class="active">Menukaart</a>
+  <a href="{{ url_for('enquete') }}" class="active">Enquête</a>
+  <a href="{{ url_for('enquete_lounge') }}" class="active">Enquête Lounge</a>
+ 
+  <a href="{{ url_for('add_dishes') }}" class="active">add dishes</a>
+  <a href="{{ url_for('metingen') }}" class="active">Metingen</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa-solid fa-bars fa-bounce"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+<script src="https://kit.fontawesome.com/ff53f42187.js" crossorigin="anonymous"></script>

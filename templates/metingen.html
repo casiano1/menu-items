@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Metingen{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="container_metingen">
+    <form action="/submit_metingen" method="post">
+
+    
+   <div class="questions_meting">
+
+       
+        <label>De naam van de klant ?</label>
+        <input class="input_meting" type="text" name="naam_klant" placeholder="tijd">
+        
+    </div>
+
+    <div class="questions_meting">
+
+        <label>Wat is de taal van de klant ?</label>
+        <label>Nederlands</label>
+        <input name="taal_klant" type="radio" value="Nederlands">
+        <label>Engels</label>
+        <input name="taal_klant" type="radio" value="Engels">.
+        <label>Anders</label>
+        <input name="taal_klant" type="radio" value="Anders">
+
+    </div>  
+
+    <div class="questions_meting">
+
+        <label>Wat voor soort klant is het ?</label>
+        <label>terugkoment</label>
+        <input name="soort_klant" type="radio" value="terugkomend">
+        <label>eerste keer</label>
+        <input name="soort_klant" type="radio" value="Eerste_keer">
+
+    </div>      
+
+    <div class="questions_meting">
+
+       
+        <label>De gemiddelde leeftijd van de klant ?</label>
+        <input class="input_meting" type="text" name="gem_leeftijd" placeholder="tijd">
+        
+    </div>
+    <div class="questions_meting">
+
+        <label>Welke medewerker helpt de klant ?</label>
+        <label>Luis</label>
+        <input name="medewerker_id" type="radio" value="1">
+        <label>Eva</label>
+        <input name="medewerker_id" type="radio" value="2">
+        <label>Milan</label>
+        <input name="medewerker_id" type="radio" value="3">
+        <label>Tommy</label>
+        <input name="medewerker_id" type="radio" value="4">
+
+    </div>
+
+    <div class="questions_meting">
+
+        <label>In welke box neemt de klant plaats ?</label>
+        <label>BOX 1</label>
+        <input name="tafel_id" type="radio" value="1">
+        <label>BOX 2</label>
+        <input name="tafel_id" type="radio" value="2">
+        <label>BOX 3</label>
+        <input name="tafel_id" type="radio" value="3">
+        <label>BOX 4</label>
+        <input name="tafel_id" type="radio" value="4">
+        <label>BOX 5</label>
+        <input name="tafel_id" type="radio" value="5">
+        <label>BOX 6</label>
+        <input name="tafel_id" type="radio" value="6">
+        <label>BOX 7</label>
+        <input name="tafel_id" type="radio" value="7">
+        <label>BOX 8</label>
+        <input name="tafel_id" type="radio" value="8">
+        <label>BOX 9</label>
+        <input name="tafel_id" type="radio" value="9">
+        <label>BOX 10</label>
+        <input name="tafel_id" type="radio" value="10">
+
+    </div>
+
+
+    <div class="questions_meting">
+
+        <label>Word de klant volgens afgesproken tijd naar zijn/haar tafel gestuurd ?</label>
+        <label>Ja</label>
+        <input name="tafel_gestuurd_op_starttijd" type="radio" value="ja">
+        <label>Nee</label>
+        <input name="tafel_gestuurd_op_starttijd" type="radio" value="nee">
+
+    </div>
+
+    <div class="questions_meting">
+
+       
+        <label>Hoe veel minuten na de afgesproken starttijd word de klant naar zijn/haar tafel gestuurd ?</label>
+        <input class="input_meting" type="text" name="minuten_na_starttijd_sec" placeholder="tijd">
+    
+    </div>
+
+    <div class="questions_meting">
+
+        <label>Tijd van demonstratie scherm ?</label>
+        <input class="input_meting" type="text" name="demonstratie_scherm_sec" placeholder="tijd">
+
+    </div>
+
+
+
+
+    <div class="questions_meting">
+
+        <label>Is er een uitleg (demonstratie) over hoe je moet golven ?</label>
+        <label>Ja</label>
+        <input name="is_er_uitleg_golf" type="radio" value="ja">
+        <label>Nee</label>
+        <input name="is_er_uitleg_golf" type="radio" value="nee">
+    </div>
+
+    <div class="questions_meting"> 
+
+        <label>Hoe lang duurt uitleg van hoe je moet golven ?</label>
+        <input class="input_meting" type="text" name="uitleg_golf_tijd_sec" placeholder="text">
+    </div>
+    
+    <div class="questions_meting">
+
+        <label>Hoe lang duurt het voordat je drankje wordt geserveerd ?</label>
+        <input class="input_meting" type="text" name="opnemen_sec" placeholder="text">
+            
+    </div>
+    <div class="questions_meting">
+
+       
+        <label>Hoe lang duurt het voordat het eten klaar is ?</label>
+        <input class="input_meting" type="text" name="bereiden_sec" placeholder="tijd">
+    
+    </div>
+
+    <div class="questions_meting">
+
+        <label>Gaan de klanten volgens eindtijd weg ?</label>
+        <label>Ja</label>
+        <input name="klant_vetrekt_op_eindtijd" type="radio" value="ja">
+        <label>Nee</label>
+        <input name="klant_vetrekt_op_eindtijd" type="radio" value="nee">
+                
+    </div>
+    
+    <div class="questions_meting">
+
+        <label>Hoeveel seconden gaan de klanten weg na eindtijd ?</label>
+        
+        <input class="input_meting" type="text" name="klant_vetrek_eindtijd_sec" placeholder="text">
+       
+    </div>
+
+
+    <div class="questions_meting">
+
+
+        <label>Betaald de klant ?</label>
+        <label>betaald</label>
+        <input name="betaald" type="radio" value="betaald">
+        <label>Niet betaald</label>
+        <input name="betaald" type="radio" value="niet_betaald">
+                    
+     </div> 
+
+     <div class="questions_meting">
+
+
+        <label>Hoe betaald de klant ?</label>
+        <label>pin</label>
+        <input name="betaalwijze" type="radio" value="pin">
+        <label>online</label>
+        <input name="betaalwijze" type="radio" value="online">
+        <label>contant</label>
+        <input name="betaalwijze" type="radio" value="contant">
+                    
+     </div> 
+
+     <div class="questions_meting">
+
+
+        <label>Hoe lang duurt het afrekenen in seconden?</label>
+        <input class="input_meting" type="text" name="afrekenen_sec" placeholder="text">
+                    
+     </div> 
+     <div class="questions_meting">
+
+
+        <label>Worden de clubs gesorteerd ?</label>
+        <label>Ja</label>
+        <input name="clubs_gesorteerd" type="radio" value="ja">
+        <label>Nee</label>
+        <input name="clubs_gesorteerd" type="radio" value="nee">
+       
+                    
+     </div> 
+
+     <div class="questions_meting">
+
+
+        <label>Hoeveel seconden duurt het voordat de clubs gesorteerd zijn ?</label>
+        <input class="input_meting" type="text" name="clubs_sorteren_sec" placeholder="text">
+                    
+     </div> 
+
+    <div class="questions_meting">
+
+
+        <label>Hoeveel seconden duurt het voordat de tafel schoon is ?</label>
+        <input class="input_meting" type="text" name="tafel_schoon_tijd_sec" placeholder="text">
+                    
+     </div> 
+     
+     
+     
+     <a href="{{ url_for('metingen') }}">
+        <button type="submit">Verzenden</button>
+        </a>
+       
+</form>
+</div>
+   <!-- code flash melding -->
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+       <ul class="messages">
+           {% for message in messages %}
+               <li>{{ message }}</li>
+           {% endfor %}
+       </ul>
+   {% endif %}
+{% endwith %}
+
+
+
+{% endblock %}
+ 

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+ 
+         
+<body>
+ <div class="content"> 
+    <h1>Bekijk hier de menukaarten</h1>
+    
+    
+    <div class="btn_box">
+     <a href="{{ url_for('enquete') }}">
+        <button id="enquete" type="button">Enquête</button>
+     </a>
+     <a href="{{ url_for('enquete_lounge') }}">
+      <button id="enquete" type="button">Enquête Lounge</button>
+   </a>
+      
+    </div>
+</div>
+</body>
+
+    
+{% endblock %}
+
+

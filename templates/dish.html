@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="dropdown">
+<button class="talen_div">Selecteer hier u taal ▼ </button>
+<div class="dropdown-content">
+<a href="{{url_for ('dishes')}}">Nederlands</a>
+<a href="{{url_for ('dishes_english')}}">Engels</a>
+
+</div>
+
+</div>
+
+  <div class="container_gerechten">
+
+    <div class="box_gerechten">
+    
+      <h1 class="gerechten_h1">voorgerecht</h1>
+    
+            {% for gerecht in voorgerechten %}
+           
+    
+            <h2 class="h2_name_gerecht" onclick="myFunction('{{ gerecht.id }}')">{{ gerecht.name }} {{ gerecht.vega }}</h2> 
+            <p class="p_plant_based">{{gerecht.plant_based}}</p> <div class="allergies" onclick="myFunction1('{{ gerecht.id }}')">allergies</div> <p class="p_price">{{gerecht.price}} €</p> 
+            <p class="p_description">{{ gerecht.description }}</p>
+            
+            <img id="image_{{ gerecht.id }}" src="{{ url_for('static', filename='image/' + gerecht.image_filename) }}" alt="{{ gerecht.name }}" style="display:none;">
+           
+        
+           <div class="allergies_div"  id="allergies_id_{{ gerecht.id }}"> {{ gerecht.allergies }}</div>
+
+    
+            {% endfor %}
+    
+    
+
+            <h1 class="gerechten_h1">Hoofdgerecht</h1>
+    
+            {% for gerecht in hoofdgerechten %}
+           
+            
+            <h2 class="h2_name_gerecht" onclick="myFunction('{{ gerecht.id }}')">{{ gerecht.name }} {{ gerecht.vega }}</h2> 
+            <p class="p_plant_based">{{gerecht.plant_based}}</p> <div class="allergies" onclick="myFunction1('{{ gerecht.id }}')">allergies</div> <p class="p_price">{{gerecht.price}} €</p> 
+            <p class="p_description">{{ gerecht.description }}</p>
+            
+            <img id="image_{{ gerecht.id }}" src="{{ url_for('static', filename='image/' + gerecht.image_filename) }}" alt="{{ gerecht.name }}" style="display:none;">
+           
+        
+           <div class="allergies_div"  id="allergies_id_{{ gerecht.id }}"> {{ gerecht.allergies }}</div>
+    
+            {% endfor %}
+
+    
+            <h1 class="gerechten_h1">Deserts</h1>
+    
+            {% for gerecht in nagerechten %}
+     
+            <h2 class="h2_name_gerecht" onclick="myFunction('{{ gerecht.id }}')">{{ gerecht.name }} {{ gerecht.vega }}</h2> 
+            <p class="p_plant_based">{{gerecht.plant_based}}</p> <div class="allergies" onclick="myFunction1('{{ gerecht.id }}')">allergies</div> <p class="p_price">{{gerecht.price}} €</p> 
+            <p class="p_description">{{ gerecht.description }}</p>
+            
+            <img id="image_{{ gerecht.id }}" src="{{ url_for('static', filename='image/' + gerecht.image_filename) }}" alt="{{ gerecht.name }}" style="display:none;">
+           
+        
+           <div class="allergies_div"  id="allergies_id_{{ gerecht.id }}"> {{ gerecht.allergies }}</div>
+    
+            {% endfor %}
+
+
+
+
+
+
+
+    <script>
+        function myFunction(gerechtId) {
+         var image = document.getElementById("image_" + gerechtId);
+         if (image.style.display === "none") {
+            image.style.display = "block";
+          } else {
+           image.style.display = "none";
+          }
+        }
+    </script>
+    <script>
+        function myFunction1(gerechtId) {
+         var allergies = document.getElementById("allergies_id_" + gerechtId );
+        if (allergies.style.display === "inline")  {
+           allergies.style.display = "none";
+         } else {
+          allergies.style.display = "inline";
+         }
+}
+</script>
+            
+    
+    
+{% endblock %}
+        
+
+
+
+
+
+
+
+
+

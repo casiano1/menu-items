@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Welkom op de enquête site{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+ 
+         
+<body>
+    
+
+
+                <div class="container">
+                    <!-- Plaats hier je inhoud van de pagina -->
+                    <div class="box">
+                        <form action="/submit" method="post">
+                    
+                          
+                            <div class="test">
+
+                            <div class="question_box">
+
+                            
+                                <p class="p-question">Wat vindt u ervan als u binnen 5 minuten geholpen wordt ?</p>
+                                <label>Ik vind het fijn</label>
+                                <input class="vragen" name="vraag_1" type="radio" value="1">
+                                <label>Ik verwacht het</label>
+                                <input class="vragen" name="vraag_1" type="radio" value="2">
+                                <label>maakt mij niet uit</label>
+                                <input class="vragen"name="vraag_1" type="radio" value="3">
+                                <label>Ik taloreer het</label>
+                                <input class="vragen"name="vraag_1" type="radio" value="4">
+                                <label>Ik vind het niet fijn</label>
+                                <input class="vragen"name="vraag_1" type="radio" value="5">
+                            </div>
+
+                            <div class="question_box">
+                                <p class="p-question">Wat vindt u ervan als u <b>NIET</b> binnen 5 minuten geholpen wordt ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_2" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_2" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_2" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_2" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_2" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als een online menu kaart beschikbaar is ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_3" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_3" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_3" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_3" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_3" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als een online menu kaart <b>NIET</b> beschikbaar is ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_4" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_4" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_4" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_4" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_4" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als het eten binnen 15 minuten er is ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_5" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_5" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_5" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_5" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_5" type="radio" value="5">
+                            </div>
+                            <div class="question_box">
+
+                            
+                                <p class="p-question">Wat zou u ervan vinden als het eten later er is dan 15 minuten ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_6" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_6" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_6" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_6" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_6" type="radio" value="5">
+                            </div>
+
+                            <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als er specials buiten de menu kaart om zijn ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_7" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_7" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_7" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_7" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_7" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als er <b>GEEN</b> specials buiten de menu kaart om zijn ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_8" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_8" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_8" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_8" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_8" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als de kok na afloop vraagt hoe het eten heeft gesmaakt ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_9" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_9" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_9" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_9" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_9" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question"></p>
+                                <label for="test">Wat zou u ervan vinden als de kok na afloop <b>NIET</b> vraagt hoe het eten heeft gesmaakt ?</label>
+                                <input name="vraag_10" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_10" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_10" type="radio" value="3">
+                                <label for="tester">Ik taloreer het/label>
+                                <input name="vraag_10" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_10" type="radio" value="5">
+                            </div>
+                            <div class="question_box">
+
+                            
+                                <p class="p-question">Wat zou u ervan vinden als het eten tegelijkertijd komt ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_11" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_11" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_11" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_11" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_11" type="radio" value="5">
+                            </div>
+
+                            <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als het eten <b>NIET</b> tegelijkertijd komt ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_12" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_12" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_12" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_12" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_12" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als u naar een plaats wordt gebracht ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_13" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_13" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_13" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_13" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_13" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als u <b>NIET</b> naar een plaats wordt gebracht ? ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_14" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_14" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_14" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_14" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_14" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als de ober u vraagt hoeveel tijd er tussen het hoofd gerecht en voor gerecht mag zitten ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_15" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_15" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_15" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_15" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_15" type="radio" value="5">
+                            </div>
+                             
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als u de ober zelf niks vraagt en zelf bepaald hoeveel tijd er tussen de gerechten in zit ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_16" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_16" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_16" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_16" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_16" type="radio" value="5">
+                            </div>
+                            <div class="question_box">
+                                <p class="p-question"></p>
+                                <label for="test">Wat zou u ervan vinden als het logo van de drankjes naar u toe wijst ?</label>
+                                <input name="vraag_17" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_17" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_17" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_17" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_17" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u ervan vinden als het logo van de drankjes de andere kant op wijst ?</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_18" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_18" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_18" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_18" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_18" type="radio" value="5">
+                            </div>
+                                <div class="question_box">
+                                <p class="p-question">Wat zou u er van vinden als u een apperatiefje krijgt aangeboden van het huis</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_19" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_19" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_19" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_19" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_19" type="radio" value="5">
+                            </div>
+                             <div class="question_box">
+                                <p class="p-question">Wat zou u er van vinden als u <b>GEEN</b> apperatiefje krijgt aangeboden van het huis</p>
+                                <label for="test">Ik vind het fijn</label>
+                                <input name="vraag_20" type="radio" value="1">
+                                <label for="tester">Ik verwacht het</label>
+                                <input name="vraag_20" type="radio" value="2">
+                                <label for="test">maakt mij niet uit</label>
+                                <input name="vraag_20" type="radio" value="3">
+                                <label for="tester">Ik taloreer het</label>
+                                <input name="vraag_20" type="radio" value="4">
+                                <label for="test">Ik vind het niet fijn</label>
+                                <input name="vraag_20" type="radio" value="5">
+                            </div>
+                               
+                            </div>
+                        
+
+                            <a href="{{ url_for('enquete') }}">
+                            <button type="submit">Verzenden</button>
+                            </a>
+                        </form>
+                    </div>
+                        
+            
+                    <!-- code flash melding -->
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}
+
+

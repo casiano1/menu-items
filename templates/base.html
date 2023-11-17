@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enquête {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}"/>
+
+   <link rel="icon" href="../static/image/favicon.jpg" type="image/x-icon" >
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=Raleway&display=swap" rel="stylesheet">
+      <!-- font-family: 'Cinzel Decorative', serif;
+font-family: 'Raleway', sans-serif; -->
+    
+    <!-- font-family: 'Oswald', sans-serif;
+    font-family: 'Teko', sans-serif; -->
+    <!-- font-family: 'Cinzel', serif; -->
+
+  </head>
+
+  <body class="main">
+    
+<div class="topnav" id="myTopnav">
+  <a href="{{ url_for('home') }}" class="active">Home</a>
+  <a href="{{ url_for('dishes') }}" class="active">Menukaart</a>
+  <a href="{{ url_for('enquete') }}" class="active">Enquête</a>
+  <a href="{{ url_for('enquete_lounge') }}" class="active">Enquête Lounge</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+    <i class="fa-solid fa-bars fa-bounce"></i>
+  </a>
+</div>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+<script src="https://kit.fontawesome.com/ff53f42187.js" crossorigin="anonymous"></script>
+
+    <header>
+      {% block header %}{% endblock %}
+    </header>
+    <div>
+      {% block content %}{% endblock %}
+    </div>
+    <footer id="footer">
+    </footer>
+  </body>
+</html>

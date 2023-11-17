@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Voor{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+    
+    <label>In welke taal schrijft u de menukaart ?</label>
+    <label>NL</label>
+    <input name="taal" type="radio" value="nl">
+    <label>ENG</label>
+    <input name="taal" type="radio" value="eng">
+
+    <label for="name">Naam</label>
+    <input type="text" name="name" required><br>
+
+    
+    <label>Is het product Vega ?</label>
+    <label>VEGA</label>
+    <input name="vega" type="checkbox" value="Ⓥ"> 
+    <label>VEGA OPTIE</label>
+    <input name="vega" type="checkbox" value="🅥"> 
+    <label>Geen</label>
+    <input name="vega" type="checkbox" value="">
+
+
+
+    <label>Is het product Gluten vrij of Gluten vrij optie ?</label>
+    <label>Gluten Vrij</label>
+    <input name="plant_based" type="checkbox" value="GV">
+    <label>Gluten Vrij Optie</label>
+    <input name="plant_based" type="checkbox" value="GV OPTIE">
+    <label>Geen</label>
+    <input name="plant_based" type="checkbox" value="">
+   
+   
+
+
+    <label for="price">Prijs</label>
+    <input type="float" name="price" required><br>
+
+    <label for="description">Beschrijving</label>
+    <textarea name="description" required></textarea><br>
+
+    <label for="category">Categorie</label>
+    <select name="category">
+        <option value="voorgerecht">Voorgerecht</option>
+        <option value="hoofdgerecht">Hoofdgerecht</option>
+        <option value="nagerecht">Nagerecht</option>
+    </select><br>
+
+
+    
+    <label>Is het product Gluten vrij, Gluten vrij optie, Vega, Vegan ?</label>
+    <label>Geen allergien</label>
+    <input name="allergies" type="checkbox" value="Geen allergiën">
+    <label>Vlees</label>
+    <input name="allergies" type="checkbox" value="🥩">
+    <label>Vis</label>
+    <input name="allergies" type="checkbox" value="🐟">
+    <label>Noten</label>
+    <input name="allergies" type="checkbox" value="🥜">
+    <label>Graan</label>
+    <input name="allergies" type="checkbox" value="🌾">
+    <label>Ei</label>
+    <input name="allergies" type="checkbox" value="🥚">
+    <label>Melk</label>
+    <input name="allergies" type="checkbox" value="🥛">
+    <label>Soja</label>
+    <input name="allergies" type="checkbox" value="🫛">
+    <label>Schaal dieren</label>
+    <input name="allergies" type="checkbox" value="🦀">
+
+    <label for="image">Afbeelding</label>
+    <input type="file" name="image"><br>
+
+    <input type="submit" value="Opslaan">
+</form>
+
+   <!-- code flash melding -->
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+       <ul class="messages">
+           {% for message in messages %}
+               <li>{{ message }}</li>
+           {% endfor %}
+       </ul>
+   {% endif %}
+{% endwith %}
+
+{% endblock %}
